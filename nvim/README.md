@@ -1,5 +1,8 @@
 # kickstart.nvim
 
+> [!NOTE]
+> These files have been modified by the forker. Please visit the [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) repository for updates.
+
 ## Introduction
 
 A starting point for Neovim that is:

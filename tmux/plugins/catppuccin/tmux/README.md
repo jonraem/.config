@@ -12,42 +12,15 @@
     <a href="https://github.com/catppuccin/tmux/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/tmux?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
-<p align="center">
-  <img src="./assets/preview.webp"/>
-</p>
 <!-- markdownlint-enable -->
 
-## Themes
-
-<details>
-<summary>🌻 Latte</summary>
-
-![Latte Flavor Preview](./assets/latte.webp)
-
-</details>
-<details>
-<summary>🪴 Frappé</summary>
-
-![Frappe Flavor Preview](./assets/frappe.webp)
-
-</details>
-<details>
-<summary>🌺 Macchiato</summary>
-
-![Macchiato Flavor Preview](./assets/macchiato.webp)
-
-</details>
-<details>
-<summary>🌿 Mocha</summary>
-
-![Mocha Flavor Preview](./assets/mocha.webp)
-
-</details>
+> [!NOTE]
+> These files have been modified by the forker. Please visit the [Catppucin for Tmux](https://github.com/catppuccin/tmux) repository for updates.
 
 ## Installation
 
 In order to have the icons displayed correctly please use/update your favorite
-[nerd font](https://www.nerdfonts.com/font-downloads).
+[Nerd Font](https://www.nerdfonts.com/font-downloads).
 If you do not have a patched font installed, you can override or remove any
 icon. Check the [documentation](./docs/reference/configuration.md) on the
 options available.
@@ -96,75 +69,6 @@ Check out what to do next in the "[Getting Started Guide](./docs/tutorials/01-ge
 > if upgrading from an earlier version
 > (especially from `v0.3.0`).
 
-### For TMUX versions prior to 3.2
-
-This plugin uses features that were only introduced into tmux in version 3.2.
-If you are using a version earlier than this, you can still have lovely
-catppuccin colors, the installation method just looks a little different.
-
-```sh
-# In your ~/.tmux.conf
-
-# Add the colors from the pallete. Check the themes/ directory for all options.
-
-# Some basic mocha colors.
-set -g @ctp_bg "#24273a"
-set -g @ctp_surface_1 "#494d64"
-set -g @ctp_fg "#cad3f5"
-set -g @ctp_mauve "#c6a0f6"
-set -g @ctp_crust "#181926"
-
-# status line
-set -gF status-style "bg=#{@ctp_bg},fg=#{@ctp_fg}"
-
-# windows
-set -gF window-status-format "#[bg=#{@ctp_surface_1},fg=#{@ctp_fg}] ##I ##T "
-set -gF window-status-current-format "#[bg=#{@ctp_mauve},fg=#{@ctp_crust}] ##I ##T "
-```
-
-### Upgrading from v0.3
-
-Breaking changes have been introduced since 0.3, to understand how to migrate
-your configuration, see pinned issue [#291](https://github.com/catppuccin/tmux/issues/291).
-
-## Recommended Default Configuration
-
-This configuration shows some customisation options, that can be further
-extended as desired.
-This is what is used for the previews above.
-
-![Example configuration](./assets/mocha.webp)
-
-```bash
-# ~/.tmux.conf
-
-# Options to make tmux more pleasant
-set -g mouse on
-set -g default-terminal "tmux-256color"
-
-# Configure the catppuccin plugin
-set -g @catppuccin_flavor "mocha"
-set -g @catppuccin_window_status_style "rounded"
-
-# Load catppuccin
-run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
-# For TPM, instead use `run ~/.config/tmux/plugins/tmux/catppuccin.tmux`
-
-# Make the status line pretty and add some modules
-set -g status-right-length 100
-set -g status-left-length 100
-set -g status-left ""
-set -g status-right "#{E:@catppuccin_status_application}"
-set -agF status-right "#{E:@catppuccin_status_cpu}"
-set -ag status-right "#{E:@catppuccin_status_session}"
-set -ag status-right "#{E:@catppuccin_status_uptime}"
-set -agF status-right "#{E:@catppuccin_status_battery}"
-
-run ~/.config/tmux/plugins/tmux-plugins/tmux-cpu/cpu.tmux
-run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
-# Or, if using TPM, just run TPM
-```
-
 ## Documentation
 
 ### Guides
@@ -178,18 +82,3 @@ run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
 - [Configuration Options Reference](./docs/reference/configuration.md)
 - [Tmux Configuration Showcase](https://github.com/catppuccin/tmux/discussions/317)
 
-## 💝 Thanks to
-
-- [Pocco81](https://github.com/Pocco81)
-- [vinnyA3](https://github.com/vinnyA3)
-- [rogeruiz](https://github.com/rogeruiz)
-- [kales](https://github.com/kjnsn)
-
-&nbsp;
-
-<!-- markdownlint-disable -->
-<p align="center">
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
-<p align="center"><a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
-<!-- markdownlint-enable -->
