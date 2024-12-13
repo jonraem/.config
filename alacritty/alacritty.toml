@@ -1,0 +1,11 @@
+import = [
+  "~/.config/alacritty/themes/nightfox.toml",
+]
+
+[window]
+opacity = 0.9
+blur = true
+
+[font]
+normal = { family = "DepartureMono Nerd Font", style = "Regular" }
+size = 14.0
